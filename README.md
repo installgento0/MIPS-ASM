@@ -1,2 +1,11 @@
 # MIPS-ASM
-MIPS Assembly programs.
+**MIPS Assembly**
+(Ongoing)
+
+-add, lw
+
+-goto, jal
+
+-procedures
+
+-Stack implementation
