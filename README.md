@@ -2,7 +2,7 @@
 **MIPS Assembly**
 (Ongoing)
 
--add, lw
+-add, lw, addi, sw, beq, slt, jr, la, li, move
 
 -goto, jal
 
