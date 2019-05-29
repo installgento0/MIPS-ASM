@@ -1,0 +1,9 @@
+Register naming schemes:
+t -> registers used for temp. data handling (values of calc.)
+s -> address values which you (shouldn't) lose the reference to
+a -> arguments/procedure parameters
+v -> return value
+ra -> return address
+sp -> stack pointer
+
+pc -> program counter
