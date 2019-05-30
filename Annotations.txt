@@ -7,3 +7,10 @@ ra -> return address
 sp -> stack pointer
 
 pc -> program counter
+
+Jal & jr:
+jal L1
+jr  $ra
+                                                                       	      jal --> inst.1 (pc - 4)
+jal - jumps to a label and stores PC's previous position to the $ra register  pc ---> inst.2
+jr $ra - goes back to ra
