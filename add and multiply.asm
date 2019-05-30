@@ -15,7 +15,7 @@ main:
       jal mult
 mult:
       beq $t1, $zero, end #beq --> compares if $reg1 equals zero if true, goto "end"
-      add $t0, $t0, 5 # t0 + 5
+      addi $t0, $t0, 5 # t0 + 5
       addi $t1, $t1, -1 # count--
       j mult # repeat loop
 end:
