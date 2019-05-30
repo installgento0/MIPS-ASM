@@ -1,4 +1,4 @@
-# addition in MIPS:
+# addition in MIPS assembly:
 # add a value from a reg. with another reg. --> add
 # add $REG $REG2 $REG3
 #    result <-- val1 + val2
