@@ -9,12 +9,13 @@ main:
       jal exp
 mult:
       beq $t1, $t2, exp #beq --> compares if $t1 (counter) equals t2 (the exponent)
-      addi $t4, $t4, $t4 # t4 + t4
+      add $t4, $t4, $t4 # t4 + t4
       addi $t1, $t1, 1 # count++
       j mult # repeat loop
 exp:
-      beq $t3, $t2, end # the exponent counter reached the exponent value? go to "end"
+      addi $t1, $t1, -2 # reset multi. count. to 1
       addi $t3, $zero, 1 # expCount++
+      beq $t3, $t2, end # the exponent counter reached the exponent value? go to "end"
       j mult
 end:
       add $v0, $t4, $zero # v0 receives the result of 3³
