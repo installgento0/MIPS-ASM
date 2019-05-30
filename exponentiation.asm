@@ -14,7 +14,7 @@ mult:
       j mult # repeat loop
 exp:
       addi $t1, $t1, -2 # reset multi. count. to 1
-      addi $t3, $zero, 1 # expCount++
+      addi $t3, $t3, 1 # expCount++
       beq $t3, $t2, end # the exponent counter reached the exponent value? go to "end"
       j mult
 end:
