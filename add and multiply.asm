@@ -8,8 +8,8 @@
 # addi $t0, $t0, 1   (or any number up to 2^31 = 2147483648)
 # Multiply 5 by 5:
 main:
-      addi $t0, $zero, 5 # t0 = 5 --> accumulator
-      addi $t1, $zero, 4 # t1 = 4 --> count. in this case, in order to stop at 25, instead of
+      add $t0, $zero, 5 # t0 = 5 --> accumulator
+      add $t1, $zero, 4 # t1 = 4 --> count. in this case, in order to stop at 25, instead of
       # initializing the counter with 5, do it with 4 since BEQ can't compare with integers, only register values
       # and $zero
       jal mult
