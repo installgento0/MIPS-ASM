@@ -35,4 +35,3 @@ end:
       add $v0, $t4, $zero # v0 receives the result of 25/5
       add $v1, $t2, $zero # v1 receives the remainder of 25/5 (integer/integer division)*
 # *So, if t0 = 10 and t1 = 3 ==> t2 = 3
-# i just want a cute gf to cuddle w/ me while i write memecode ;-; 
