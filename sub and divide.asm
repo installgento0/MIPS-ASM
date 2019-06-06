@@ -11,9 +11,9 @@ main:
 	addi $a0, $zero, 25 # t0 = 25 --> dividend
 	addi $a1, $zero, 5 # t1 = 5 --> divider
 div:
-	beq $v0,$a1,tora
+	beq $v0,$a1,ret
 	addi $v0, $v0, 1
 	sub $a0,$a0,$a1
 	j div	
-tora:
-	jr $ra
+ret:
+	add $v0, $v0, $a0 # v0 receives the result
