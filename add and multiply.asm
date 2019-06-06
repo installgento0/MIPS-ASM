@@ -12,9 +12,9 @@ main:
 	addi $a1, $zero, 4 # a1 = 4 --> count
 	addi $a2, $a2, 1
 mult:
-	beq $a2, $a1, tora
+	beq $a2, $a1, ret
 	addi $a0, $a0, 5 
 	addi $a2, $a2, 1
 	j mult
-tora:
-	jr $ra	
+ret:
+	add $v0, $v0, $a0 # v0 receives the result
