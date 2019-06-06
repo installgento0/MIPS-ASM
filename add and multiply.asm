@@ -6,17 +6,15 @@
 # eg2: add $t0, $zero, $zero --> same as: addi $t0, $zero, 0
 # add a value directly to a register --> addi
 # addi $t0, $t0, 1   (or any number up to 2^31 = 2147483648)
-# Multiply 5 by 5:
+# Multiply 5 by 4:
 main:
-      add $t0, $zero, 5 # t0 = 5 --> accumulator
-      add $t1, $zero, 4 # t1 = 4 --> count. in this case, in order to stop at 25, instead of
-      # initializing the counter with 5, do it with 4 since BEQ can't compare with integers, only register values
-      # and $zero
-      jal mult
+	addi $a0, $zero, 5 # a0 = 5
+	addi $a1, $zero, 4 # a1 = 4 --> count
+	addi $a2, $a2, 1
 mult:
-      beq $t1, $zero, end #beq --> compares if $reg1 equals zero if true, goto "end"
-      addi $t0, $t0, 5 # t0 + 5
-      addi $t1, $t1, -1 # count--
-      j mult # repeat loop
-end:
-      add $v0, $t0, $zero # v0 receives the result of 5*5
+	beq $a2, $a1, tora
+	addi $a0, $a0, 5 
+	addi $a2, $a2, 1
+	j mult
+tora:
+	jr $ra	
