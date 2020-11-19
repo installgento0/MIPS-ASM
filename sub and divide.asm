@@ -8,12 +8,16 @@
 # subi $t0, $t0, 1   (or any number up to 2^31 = 2147483648)
 # Divide 25 by 5:
 main:
-	addi $a0, $zero, 25 # t0 = 25 --> dividend
-	addi $a1, $zero, 5 # t1 = 5 --> divider
+	addi $a0, $zero, 25 # a0 --> dividend
+	addi $a1, $zero, 5 # a1 --> divider
+	add $t0, $zero, $zero # t0 = 0 --> remainder
+	add $t1, $zero, $zero # t1 = 0 --> flag
 div:
-	beq $v0,$a1,ret
+	bne $zero, $t1 , ret
 	addi $v0, $v0, 1
 	sub $a0,$a0,$a1
-	j div	
+	slt $t1, $a0, $a1
+	add $t0, $zero, $a0
+	j div
 ret:
-	add $v0, $v0, $a0 # v0 receives the result
+	add $v1, $zero, $t0 # v1 receives the remainder
