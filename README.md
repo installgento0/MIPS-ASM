@@ -1,11 +1,4 @@
 # MIPS-ASM
 **MIPS Assembly**
-(Ongoing)
 
--basic instructions
-
--procedures
-
--Stack implementation
-
-**Fixes pending: (see annotations)**
+Software used: [MARS MIPS Simulator](http://courses.missouristate.edu/kenvollmar/mars/download.htm)
